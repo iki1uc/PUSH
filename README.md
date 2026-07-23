@@ -1,28 +1,20 @@
-# ANKER – Stabilisationsachse · iki1uc
+# PUSH · Aktivierungsstation · Trigger/Push
 
-## Zweck
-ANKER ist die Stabilisationsachse des iki1uc‑Systems.
-Es hält die Achsen IQ, QI, EVO, UPD, UPG, BIOS und CALC im korrekten Verhältnis.
+PUSH ist die Aktivierungsstation des iki1uc-Systems.
+Sie löst Werte aus, startet Prozesse und schiebt Zustände vorwärts.
 
-## Struktur
-- NAME: ANKER
-- ID: A01
-- Station: S01
-- Dimension: D4
-- Modus: erabel (neutral, operation möglich)
+──────────────────────────────────────────────
+## Achsen
 
-## Rolle
-ANKER stabilisiert, ohne selbst aktiv zu berechnen oder zu steuern.
-Es ist die neutrale Achse zwischen AXI, 6d und API.
+- state – READY / BLOCK / HOLD
+- trigger – ausgelöster Wert
+- push – Aktivierung
 
-## Bindungen
-- AXI
-- 6d
-- 360
-- 100
-- 213 (REAL)
-- API
+──────────────────────────────────────────────
+## Dateien
 
-## Status
-STATE = STABIL  
-READY = 100%
+- PUSH.core.js – Hauptengine
+- PUSH.state.js – Statusachse
+- PUSH.pipe.js – Pipeline
+- id.html – PUSH-Stempel
+- index.html – PUSH-Geometrie
